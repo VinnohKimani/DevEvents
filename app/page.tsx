@@ -1,27 +1,32 @@
-import EvnetBtn from "@/components/EventsBtn";
+'use client';
+
+import EventBtn from "@/components/EventsBtn";
+import EventCard from "@/components/EventCard";
+import { events } from "@/lib/constants";
+import { Container, Title, Text, SimpleGrid } from "@mantine/core";
 
 const Home = () => {
   return (
-    <section>
-      <h1 className="text-center">
-        The Hub for Every Dev <br /> Events You Can't Miss
-      </h1>
-      <p className="text-center mt-5">
-        Hackthons, Meetups, Conferences. All In One Place
-      </p>
-      <EvnetBtn/>
+    <Container size="xl" py="xl">
+      <section style={{ textAlign: "center", marginBottom: "4rem", marginTop: "2rem" }}>
+        <Title order={1} size="h1" fw={900}>
+          The Hub for Every Dev <br /> Events You Can't Miss
+        </Title>
+        <Text size="lg" c="dimmed" mt="md" mb="xl">
+          Hackathons, Meetups, Conferences. All In One Place
+        </Text>
+        <EventBtn />
+      </section>
 
-      {/* <div className="mt-20 space-y-7">
-        <h3>Featured Events</h3>
-        <ul className="events">
+      <section>
+        <Title order={2} mb="xl">Featured Events</Title>
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
           {events.map((event) => (
-            <li key={event.title}>
-              <EventCard {...event} />
-            </li>
+            <EventCard key={event.slug} {...event} />
           ))}
-        </ul>
-      </div> */}
-    </section>
+        </SimpleGrid>
+      </section>
+    </Container>
   );
 };
 

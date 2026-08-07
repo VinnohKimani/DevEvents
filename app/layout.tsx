@@ -59,7 +59,9 @@ export default function RootLayout({
             saturation={1}
           />
         </div>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme} defaultColorScheme="dark">
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );

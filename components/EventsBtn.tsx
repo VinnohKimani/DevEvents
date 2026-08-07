@@ -10,15 +10,19 @@ function EvnetBtn() {
     <Group justify="center">
       <Button
         // variant="default"
+        color="#5dfeca"
         rightSection={<ArrowDownIcon size={14} />}
       >
         Hackathons
       </Button>
 
-      <Button rightSection={<ArrowDownIcon size={14}  />}>Meetups</Button>
+      <Button color="#5dfeca" rightSection={<ArrowDownIcon size={14} />}>
+        Meetups
+      </Button>
 
       <Button
         // variant="light"
+        color="#5dfeca"
         rightSection={<ArrowDownIcon size={14} />}
       >
         Conferences
