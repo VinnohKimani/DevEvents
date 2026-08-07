@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "@mantine/core/styles.css";
-import { createTheme, MantineProvider } from "@mantine/core";
+import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import LightRays from "@/components/LightRays";
 import NavBar from "@/components/NavBar";
 
@@ -21,7 +21,11 @@ export const metadata: Metadata = {
   description: "The Hub for Every Dev Event You Mustn't Miss!!",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   const theme = createTheme({
     fontFamily: "Open Sans, sans-serif",
     primaryColor: "cyan",
@@ -30,7 +34,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <ColorSchemeScript />
+      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <NavBar />
         <div className="absolute inset-0 top-0 z-[-1] min-h-screen">
