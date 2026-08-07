@@ -37,6 +37,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Reads the user's local system preference and understands whether it is dark or light theme  */}
         <ColorSchemeScript />
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>

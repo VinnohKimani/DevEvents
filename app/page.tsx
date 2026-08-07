@@ -1,3 +1,5 @@
+import EvnetBtn from "@/components/EventsBtn";
+
 const Home = () => {
   return (
     <section>
@@ -7,6 +9,18 @@ const Home = () => {
       <p className="text-center mt-5">
         Hackthons, Meetups, Conferences. All In One Place
       </p>
+      <EvnetBtn/>
+
+      {/* <div className="mt-20 space-y-7">
+        <h3>Featured Events</h3>
+        <ul className="events">
+          {events.map((event) => (
+            <li key={event.title}>
+              <EventCard {...event} />
+            </li>
+          ))}
+        </ul>
+      </div> */}
     </section>
   );
 };
