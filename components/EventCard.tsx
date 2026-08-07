@@ -34,7 +34,7 @@ const EventCard = ({ title, image, slug, location, date, time, description }: Pr
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={700} size="lg" lineClamp={1}>
+        <Text fw={700} size="lg" lineClamp={1} c="#5dfeca">
           {title}
         </Text>
         <Badge  color="#5dfeca" variant="light">
@@ -42,7 +42,7 @@ const EventCard = ({ title, image, slug, location, date, time, description }: Pr
         </Badge>
       </Group>
 
-      <Text size="sm" c="dimmed" lineClamp={2} style={{ flexGrow: 1 }}>
+      <Text size="sm" lineClamp={2} style={{ flexGrow: 1, color: "var(--mantine-color-gray-3)" }}>
         {description}
       </Text>
 
@@ -72,6 +72,8 @@ const EventCard = ({ title, image, slug, location, date, time, description }: Pr
         component={Link}
         href={`/events/${slug}`}
         color="#5dfeca"
+        c="black"
+        fw={700}
         fullWidth
         mt="md"
         radius="md"

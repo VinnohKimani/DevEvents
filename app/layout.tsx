@@ -29,6 +29,7 @@ export default function RootLayout({
   const theme = createTheme({
     fontFamily: "Open Sans, sans-serif",
     primaryColor: "cyan",
+    autoContrast: true,
   });
   return (
     <html
