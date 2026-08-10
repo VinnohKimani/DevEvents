@@ -1,6 +1,5 @@
-'use client';
 
-import { Card, Image, Text, Group, Badge, Button } from "@mantine/core";
+import { Card, Image, Text, Group, Badge, Button, CardSection } from "@mantine/core";
 import { CalendarBlank, Clock, MapPin } from "@phosphor-icons/react";
 import Link from "next/link";
 
@@ -24,14 +23,14 @@ const EventCard = ({ title, image, slug, location, date, time, description }: Pr
       display="flex"
       style={{ flexDirection: "column", height: "100%", cursor: "pointer" }}
     >
-      <Card.Section>
+      <CardSection>
         <Image
           src={image}
           alt={title}
           height={160}
           fallbackSrc="https://placehold.co/600x400?text=Placeholder"
         />
-      </Card.Section>
+      </CardSection>
 
       <Group justify="space-between" mt="md" mb="xs">
         <Text fw={700} size="lg" lineClamp={1} c="#5dfeca">
