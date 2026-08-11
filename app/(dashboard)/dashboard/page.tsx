@@ -1,12 +1,12 @@
 // This is the main dashboard for a user after login in
 'use client';
-
+// this is the events dashboard page
 import EventBtn from "@/components/EventsBtn";
 import EventCard from "@/components/EventCard";
 import { events } from "@/lib/constants";
 import { Container, Title, Text, SimpleGrid } from "@mantine/core";
 
-const Home = () => {
+const Dashboard = () => {
   return (
     <Container size="xl" py="xl">
       <section style={{ textAlign: "center", marginBottom: "4rem", marginTop: "2rem" }}>
@@ -31,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Dashboard;
