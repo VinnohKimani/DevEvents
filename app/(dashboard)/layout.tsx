@@ -9,10 +9,8 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+    
         <DashboardLayout>{children}</DashboardLayout>
-      </body>
-    </html>
+     
   );
 }

@@ -7,7 +7,7 @@ import {
   Button,
   Avatar,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+
 import {
   IconLogout,
   IconUser,
@@ -21,7 +21,6 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [opened, { toggle }] = useDisclosure();
   const router = useRouter();
 
   const handleLogout = () => {
@@ -53,7 +52,7 @@ export default function DashboardLayout({
             </Avatar>
             <Button
               variant="subtle"
-              color="red"
+              color="#5dfeca"
               leftSection={<IconLogout size={16} />}
               onClick={handleLogout}
             >
