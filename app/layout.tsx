@@ -34,13 +34,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      suppressHydrationWarning
     >
-      <head>
-        {/* Reads the user's local system preference and understands whether it is dark or light theme  */}
+      {/* <head>
+
         <ColorSchemeScript />
-      </head>
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      </head> */}
+      <body className="min-h-full flex flex-col">
         <div className="absolute inset-0 top-0 z-[-1] min-h-screen">
           <LightRays
             raysOrigin="top-center-offset"
