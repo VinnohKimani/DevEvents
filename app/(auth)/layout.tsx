@@ -1,20 +1,27 @@
-import "./globals.css";
-import "@mantine/core/styles.css";
+"use client";
 
+import { Center, Container, Paper } from "@mantine/core";
 
-export default function RootLayout({
+export default function AuthLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
-       
-        <main>
+    <Container
+      size="xs"
+      style={{ minHeight: "100vh", display: "flex", alignItems: "center" }}
+    >
+      <Center style={{ width: "100%" }}>
+        <Paper
+          radius="md"
+          p="xl"
+          withBorder
+          style={{ width: "100%", maxWidth: 420 }}
+        >
           {children}
-        </main>
-      </body>
-    </html>
+        </Paper>
+      </Center>
+    </Container>
   );
 }

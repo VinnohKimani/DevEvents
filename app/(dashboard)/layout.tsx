@@ -1,4 +1,4 @@
-import "./globals.css";
+// import "./globals.css";
 import "@mantine/core/styles.css";
 
 export default function RootLayout({
