@@ -4,7 +4,6 @@ import "./globals.css";
 import "@mantine/core/styles.css";
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import LightRays from "@/components/LightRays";
-import NavBar from "@/components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +41,6 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <NavBar />
         <div className="absolute inset-0 top-0 z-[-1] min-h-screen">
           <LightRays
             raysOrigin="top-center-offset"
